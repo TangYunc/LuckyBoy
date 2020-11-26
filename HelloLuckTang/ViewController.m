@@ -35,8 +35,8 @@
     
     CGFloat labelW = 300 * KWidth_ScaleW;
     CGFloat labelH = 40 * KWidth_ScaleH;
-    NSArray *labelNames = @[@"liveTang", @"luckyTang",@"luckyDan"];
-    NSArray *lackyNums = @[@"1 5 7 13 16 19 -- 28", @"1 5 10 18 21 28 -- 16",@"1 5 7 18 21 28 -- 16"];
+    NSArray *labelNames = @[@"liveTang0", @"liveTang1", @"liveTang2", @"luckyTang", @"luckyDan"];
+    NSArray *lackyNums = @[@"1 5 7 13 16 19 -- 28", @"5 7 13 16 19 23 -- 28", @"5 7 13 16 19 24 -- 28", @"1 5 10 18 21 28 -- 16",@"1 5 7 18 21 28 -- 16"];
     CGFloat labelFromTop = kScreenHeight - labelH * lackyNums.count - 50 * KWidth_ScaleH;
     for (NSInteger i = 0; i < lackyNums.count; i++) {
         
@@ -51,10 +51,10 @@
     CGFloat btnW = 75 * KWidth_ScaleW;
     CGFloat btnH = btnW * 0.6;
     CGFloat btnFromLeftGap = (kScreenWidth - btnW) * 0.5 - 40 *KWidth_ScaleW;
-    CGFloat btnFromTopGap = kScreenHeight * 0.25 + 10 *KWidth_ScaleH;
+    CGFloat btnFromTopGap = kScreenHeight * 0.15 + 10 *KWidth_ScaleH;
     for (NSInteger i = 0; i < luckBtnNames.count; i++) {
         UIButton *luckBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        luckBtn.frame = CGRectMake(btnFromLeftGap, btnFromTopGap +i * (btnH + 150 * KWidth_ScaleH) , btnW, btnH);
+        luckBtn.frame = CGRectMake(btnFromLeftGap, btnFromTopGap +i * (btnH + 120 * KWidth_ScaleH) , btnW, btnH);
         luckBtn.tag = 888 + i;
         [luckBtn setBackgroundColor:[UIColor redColor]];
         [luckBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
