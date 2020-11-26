@@ -35,9 +35,9 @@
     
     CGFloat labelW = 300 * KWidth_ScaleW;
     CGFloat labelH = 40 * KWidth_ScaleH;
-    NSArray *labelNames = @[@"luckyTang",@"luckyDan"];
-    NSArray *lackyNums = @[@"1 5 10 18 21 28 -- 16",@"1 5 7 18 21 28 -- 16"];
-    CGFloat labelFromTop = kScreenHeight - labelH - 50 * KWidth_ScaleH - labelH;
+    NSArray *labelNames = @[@"liveTang", @"luckyTang",@"luckyDan"];
+    NSArray *lackyNums = @[@"1 5 7 13 16 19 -- 28", @"1 5 10 18 21 28 -- 16",@"1 5 7 18 21 28 -- 16"];
+    CGFloat labelFromTop = kScreenHeight - labelH * lackyNums.count - 50 * KWidth_ScaleH;
     for (NSInteger i = 0; i < lackyNums.count; i++) {
         
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((kScreenWidth - labelW) * 0.5, labelFromTop + i * labelH, labelW , labelH)];
